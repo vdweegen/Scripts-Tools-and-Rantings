@@ -94,6 +94,12 @@ else
     echo -n "Extra description (optional):"
     read DESCRIPTION
     
+    # Placeholder for empty username
+    if [ -z "$USERNAME" ];
+    then
+        USERNAME="<empty>"
+    fi
+    
     DESCRIPTION="${DESCRIPTION// /_}"
     
     # Convert section to md5 using OpenSSL, Make lowercase
